@@ -20,6 +20,18 @@ Desenvolver uma solução integrada de aplicativo + IoT para auxiliar pequenos p
 [] Diminuir desperdícios de água e outros recursos;
 [] Auxiliar na tomada de decisões com base em dados.
 
+## Diagrama de comunicação
+
+O diagrama apresenta o fluxo de comunicação entre os componentes responsáveis pelo monitoramento e controle da estufa. O **ESP32** realiza a comunicação com o sensor **DHT11**, responsável pela coleta de dados de temperatura e umidade, e com o **relé de 5V**, utilizado para o acionamento da **bomba d’água**.
+
+Os dados coletados pelo **ESP32** são enviados por meio de requisições **POST** para a **API Backend**, que realiza o armazenamento das informações no **MongoDB**. O aplicativo/frontend consulta esses dados através de requisições **GET**, permitindo que o produtor acompanhe as condições da estufa.
+
+Dessa forma, a arquitetura integra sensoriamento, armazenamento, comunicação e controle, permitindo o monitoramento remoto da estufa e o acionamento do sistema de irrigação.
+
+### Fluxo principal:
+
+![diagrama de comunicação do projeto](docs/diagrama_de_comunicacao.jpeg)
+
 ## Desenvolvedores
 
 | Nome | GitHub |
@@ -30,8 +42,3 @@ Desenvolver uma solução integrada de aplicativo + IoT para auxiliar pequenos p
 | Matheus Vieira | @matvieira7 |
 | Murillo Souza | @murillomsouza |
 | Raul Corrêa | @raul612 |
-
-
-
-
-
